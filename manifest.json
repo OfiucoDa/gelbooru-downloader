@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Gelbooru Formatted Filename Downloader",
+  "version": "1.0",
+  "description": "Download images from Gelbooru with descriptive filenames.",
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "permissions": [
+    "downloads",
+    "storage",
+    "*://*.gelbooru.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon-48.png",
+      "96": "icon-96.png"
+    },
+    "default_title": "Gelbooru Formatted Filename Downloader"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.gelbooru.com/index.php?page=post&s=view&id=*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ophiuchusye@gmail.com"
+    }
+  }
+}
