@@ -7,5 +7,5 @@ Expanding an image reveals a download button that uses the following format:
 - Go to `about:config`
 - Set `xpinstall.signatures.required` to `false`
 - Go to `about:addons`
-- Press "Install Add-on From File" and select zip file you downloaded
+- Press "Install Add-on From File" and select zip file you downloaded.  
 __If you attempt this in the standard Firefox browser, you will remove the add-on once you restart it.__
