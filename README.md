@@ -2,8 +2,7 @@
 Expanding an image reveals a download button that uses the following format:
 `[character]_[copyright]_drawn_by_[artist]_G[PostID]`
 
-## Instalation in Firefox Developer Edition 
-
+## Instalation in Firefox Developer Edition and Librewolf
 - Go to `about:config`
 - Set `xpinstall.signatures.required` to `false`
 - Go to `about:addons`
