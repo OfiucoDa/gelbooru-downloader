@@ -1,6 +1,6 @@
 # gelbooru-downloader
 Expanding an image reveals a download button that uses the following format:
-`[character]_[copyright]_drawn_by_[artist]_G[PostID]`
+`__[character]_[copyright]_drawn_by_[artist]__G[PostID]`
 
 ## Instalation in Firefox Developer Edition and Librewolf
 - Go to `about:config`
