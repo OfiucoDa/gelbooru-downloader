@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Gelbooru Formatted Filename Downloader",
-  "version": "1.0",
+  "version": "1.6",
   "description": "Download images from Gelbooru with descriptive filenames.",
   "icons": {
     "48": "icon-48.png",
@@ -9,12 +9,15 @@
   },
   "permissions": [
     "downloads",
-    "storage",
-    "*://*.gelbooru.com/*"
+    "*://*.gelbooru.com/*",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
   },
   "browser_action": {
     "default_icon": {
@@ -25,14 +28,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.gelbooru.com/index.php?page=post&s=view&id=*"],
-      "js": ["content.js"]
+      "matches": [
+        "*://*.gelbooru.com/index.php?page=post&s=view&id=*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
-  "options_ui": {
-    "page": "options.html",
-    "browser_style": true
-  },
   "browser_specific_settings": {
     "gecko": {
       "id": "ophiuchusye@gmail.com"
